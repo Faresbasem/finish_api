@@ -135,7 +135,9 @@ const login = asyncfn(async (req, res, next) => {
                     subject: "EGYPTOUR.com",
                     text: "Successfully Register with us.",
                     html: `<p><h2>Welcome ${firstName}!<h2/><br/>${meanMessage}Please verify your account <a href='${link}'>open here.</a><br></br></p>`,
+                    
                 })
+                res.json({status:httpstatus.suc,data:{token}});
                 return res.status(201).json({
                     status: httpstatus.suc,
                     msg: "you should receive an email again and open the URL"
