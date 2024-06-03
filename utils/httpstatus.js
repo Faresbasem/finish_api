@@ -4,3 +4,4 @@ const ERR="error";
 module.exports={
     suc,Fail,ERR
 }
+//one dial
